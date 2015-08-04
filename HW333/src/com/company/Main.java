@@ -2,8 +2,15 @@ package com.company;
 
 public class Main {
 
+    public static int f(){
+        return 1000;
+    }
+
+
+
     public static void main(String[] args) {
         // write your code here
+        int i = 1000;
         int a = 20;
        // int b = a + 5;
         //String s = "Test String";
@@ -53,7 +60,6 @@ public class Main {
       }
 
 
+    }}
 
 
-    }
-}
