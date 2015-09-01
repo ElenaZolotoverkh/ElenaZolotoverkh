@@ -56,6 +56,9 @@ public class Driver1 {
         } catch (InterruptedException e) {
             e.printStackTrace();                                   // задержать браузер перед закрытием на 5 сек
         }
+        driver.findElement(By.xpath("//body//div//a[@href='#!/signup']")).click();
+
+
 
         driver.quit();
     }

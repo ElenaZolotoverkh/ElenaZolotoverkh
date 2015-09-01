@@ -89,7 +89,7 @@ public class Driver_HW {
             e.printStackTrace();                                   // задержать браузер перед закрытием на 5 сек
         }
 
-        WebElement error = driver.findElementByXPath("//md-input-container[1]//*[@class='ng-scope']"); //Вывести в консоль заголовок поля Email address
+        WebElement error = driver.findElementByXPath("//md-input-container[1]//*[@class='ng-scope']"); //Вывести в консоль ошибку под полем
         System.out.println(error.getText());
 
 
