@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
 /**
+
  * Created by Admin on 08.09.15.
  */
 public class AngelPage {
