@@ -102,13 +102,13 @@ public class Lesson11 {
         AngelPage.testPass11();
     }
 
-    @Test
-    public void test12() {
-        AngelPage.setMaster("qwe123");
-        AngelPage.setSite("ASD");
-        AngelPage.genarate();
-        AngelPage.testPass12();
-    }
+    //  @Test
+    //  public void test12() {
+    //    AngelPage.setMaster("qwe123");
+    //   AngelPage.setSite("ASD");
+    //   AngelPage.genarate();
+    //   AngelPage.testPass12();
+    // }
     @Test
     public void test13() {
         AngelPage.setMaster("qwe1234");
@@ -118,24 +118,24 @@ public class Lesson11 {
 
     }
 
-    @Test
-    public void test14() {
-        AngelPage.setMaster("qwe1234");
-        AngelPage.setSite("ASD12");
-        AngelPage.genarate();
-        AngelPage.testPass14();
-        AngelPage.masterValue();
-    }
+    //  @Test
+    // public void test14() {
+    //    AngelPage.setMaster("qwe1234");
+    //    AngelPage.setSite("ASD12");
+    //   AngelPage.genarate();
+    //    AngelPage.testPass14();
+    //   AngelPage.masterValue();
+    // }
 
-    @Test
-    public void test15() {
-        AngelPage.setMaster("qwe1234");
-        AngelPage.setSite("ASD123");
-        AngelPage.genarate();
-        TestHelper.slp(2);
-        TestHelper.DieModalDie();
-        AngelPage.siteFull();
-    }
+  //  @Test
+  //  public void test15() {
+   //     AngelPage.setMaster("qwe1234");
+    //    AngelPage.setSite("ASD123");
+    //    AngelPage.genarate();
+    //    TestHelper.slp(2);
+    //    TestHelper.DieModalDie();
+    //    AngelPage.siteFull();
+   // }
 
     @Test
     public void test16() {
