@@ -19,15 +19,17 @@ public class Booking_page {
     public static void setFromLvov(){
         TestHelper.driver.findElementByXPath("//div[@title='Львов']").click();
     }
+    public static void setFromNik(){
+        TestHelper.driver.findElementByXPath("//div[@title='Николаев Пасс']").click();
+    }
     public static void setTo(String value){
         TestHelper.driver.findElementByXPath("//input[@name='station_till']").sendKeys(value);
     }
     public static void setToIF(){
         TestHelper.driver.findElementByXPath("//div[@title='Ивано-Франковск']").click();
     }
-    public static void setToY(){
-        TestHelper.driver.findElementByXPath("//div[@title='Ужгород']").click();
-    }
+    public static void setToY(){TestHelper.driver.findElementByXPath("//div[@title='Ужгород']").click();}
+    public static void setToO(){TestHelper.driver.findElementByXPath("//div[@title='Одесса']").click();}
     public static void setDate(String value){
         TestHelper.driver.findElementByXPath("//input[@name='date_dep']").clear();
         TestHelper.driver.findElementByXPath("//input[@name='date_dep']").sendKeys(value);
@@ -49,7 +51,6 @@ public class Booking_page {
         Assert.assertEquals(TestHelper.driver.findElementByXPath("//tbody//tr[4]//a").getText(),"829 Л");
     }
     public static void showRoute(){
-
         TestHelper.driver.findElementByXPath("//tbody//tr[2]//a").click();
         TestHelper.slp(4);
         Assert.assertEquals(TestHelper.driver.findElementByXPath("//div[@class='vToolsPopupHeader']/span").getText(),"Маршрут поезда");
@@ -57,17 +58,12 @@ public class Booking_page {
         TestHelper.driver.findElementByXPath("//a[@title='закрыть']").click();
     }
     public static void choseTrain(){
-
         TestHelper.driver.findElementByXPath("//tbody//tr[2]//div[@title='Купе']//button[text()='Выбрать']").click();
-
     }
-
     public static void choseTrain601(){
         TestHelper.driver.findElementByXPath("//tr[5]//div[@title='Плацкарт']//button[text()='Выбрать']").click();
     }
-
     public static void checkPlace(){
-
         Assert.assertEquals(TestHelper.driver.findElementByXPath("//span[text()='31']").getCssValue("color"),"rgba(0, 0, 0, 1)");
         TestHelper.slp(4);
         Assert.assertEquals(TestHelper.driver.findElementByXPath("//div[@class='coach_scheme coup t3']/span/b").getText(),"№\n5");
@@ -85,25 +81,16 @@ public class Booking_page {
         TestHelper.driver.findElementByXPath("//span[text()='41']").click();
         TestHelper.driver.findElementByXPath("//span[text()='42']").click();
     }
-    public static void setLastName1(String value){
-        TestHelper.driver.findElementByXPath("//tr[@class='vToolsDataTableRowSelected']//input[@class='lastname']").sendKeys(value);
+    public static void setFirstUniversal(int passNumber, String value){
+        TestHelper.driver.findElementByXPath("//div[@id='ts_chs_tbl']//tbody//tr[td[text()='" + passNumber + "']]//input[@title='Имя']").sendKeys(value);
     }
-    public static void setFirstName1(String value){
-        TestHelper.driver.findElementByXPath("//tr[@class='vToolsDataTableRowSelected']//input[@class='firsname']").sendKeys(value);
-    }
-    public static void setLastName2(String value){
-        TestHelper.driver.findElementByXPath("//tr[@class='vToolsDataTableRow']//input[@class='lastname']").sendKeys(value);
-    }
-    public static void setFirstName2(String value){
-        TestHelper.driver.findElementByXPath("//tr[@class='vToolsDataTableRow']//input[@class='firsname']").sendKeys(value);
-    }
-    public static void setLastName(String value){
-        TestHelper.driver.findElementByXPath("//input[@class='lastname']").sendKeys(value);
-    }
-    public static void setFirstName(String value){
-        TestHelper.driver.findElementByXPath("//input[@class='firstname']").sendKeys(value);
+    public static void setLastNameUniversal(int passNumber, String value) {
+        TestHelper.driver.findElementByXPath("//div[@id='ts_chs_tbl']//tbody//tr[td[text()='" + passNumber + "']]//input[@title='Фамилия']").sendKeys(value);
     }
     public static void checkPrice(){
         Assert.assertEquals(TestHelper.driver.findElementByXPath("//button[@class='complex_btn']//b").getText(),"163,76 грн");
+    }
+    public static void noRes(){
+        Assert.assertEquals(TestHelper.driver.findElementByXPath("//div[@id='ts_res_not_found']").getText(),"По запрашиваемым Вами значениям ничего не найдено.");
     }
 }

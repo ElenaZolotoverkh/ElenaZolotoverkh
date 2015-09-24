@@ -36,9 +36,9 @@ public class Booking_Test {
         TestHelper.slp(3);
         Booking_page.choosePlace();
         TestHelper.slp(3);
-        Booking_page.setLastName("Test1");
+        Booking_page.setLastNameUniversal(1, "Test");
         TestHelper.slp(2);
-        Booking_page.setFirstName("Test2");
+        Booking_page.setFirstUniversal(1, "Test2");
         TestHelper.quit();
     }
     @Test
@@ -63,16 +63,33 @@ public class Booking_Test {
         Booking_page.checkPlace2();
         TestHelper.slp(3);
         Booking_page.choosePlace2();
+        TestHelper.slp(7);
+        Booking_page.setFirstUniversal(1, "Test");
+        TestHelper.slp(7);
+        Booking_page.setLastNameUniversal(1, "TestHo");
         TestHelper.slp(3);
-        Booking_page.setFirstName1("Test");
-        Booking_page.setLastName1("Mia");
+        Booking_page.setFirstUniversal(2, "TestGo");
         TestHelper.slp(3);
-        Booking_page.setFirstName1("TestGo");
-        Booking_page.setLastName1("MiaGo");
+        Booking_page.setLastNameUniversal(2, "TestDo");
         TestHelper.slp(3);
         Booking_page.checkPrice();
         TestHelper.slp(3);
         TestHelper.quit();
+    }
+    @Test
+    public void test3(){
+        Booking_page.setFrom("Николаев Пасс");
+        TestHelper.slp(3);
+        Booking_page.setFromNik();
+        Booking_page.setTo("Одесса");
+        TestHelper.slp(3);
+        Booking_page.setToO();
+        TestHelper.slp(3);
+        Booking_page.setDate("01.11.2015");
+        TestHelper.slp(3);
+        Booking_page.pressSearch();
+        TestHelper.slp(5);
+        Booking_page.noRes();
 
     }
 }
